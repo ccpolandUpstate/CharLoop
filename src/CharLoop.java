@@ -42,20 +42,20 @@ public class CharLoop
         //System.out.println("vowel " + maxChar + " occurs " + vowelCount + " times.");
         return vowelCount;
     }
-    // METHOD FOR DETERMING WHICH FOLLOW SHOWS UP MOST
+    // METHOD FOR DETERMING WHICH VOWEL SHOWS UP MOST
     public static char whichVowel(String whatVowel) {
-        char mostOccuredVowel = ' '; int max_freq=0, count=0;
+        char mostOccuredVowel = ' '; int count=0;
         char ch;
-        for(int i=0;i<whatVowel.length();i++){
+        for (int i=0; i < whatVowel.length(); i++) {
             ch = whatVowel.charAt(i);
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                for (int j=0; j<whatVowel.length(); j++) {
+                for (int j=0; j < whatVowel.length(); j++) {
                     if (whatVowel.charAt(j) == ch)
                     count++;
                 }
             }
-            if(count>max_freq){
-                mostOccuredVowel=ch;
+            if (count > 0) {
+                mostOccuredVowel = ch;
             }
         }
         return mostOccuredVowel;
