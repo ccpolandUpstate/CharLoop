@@ -44,21 +44,24 @@ public class CharLoop
     }
     // METHOD FOR DETERMING WHICH VOWEL SHOWS UP MOST
     public static char whichVowel(String whatVowel) {
-        char mostOccuredVowel = ' '; int count=0;
-        char ch;
-        for (int i=0; i < whatVowel.length(); i++) {
-            ch = whatVowel.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                for (int j=0; j < whatVowel.length(); j++) {
-                    if (whatVowel.charAt(j) == ch)
+        char max_alpha=' '; int max_freq=0, count=0;
+        char c;
+        for (int i=0; i<whatVowel.length(); i++){
+            c = whatVowel.charAt(i);
+            if (c == 'a' || c =='e' || c == 'i' || c == 'o' || c == 'u') {
+                for (int j=0; j<whatVowel.length(); j++){
+                    if (whatVowel.charAt(j) == c)
                     count++;
-                }
+                } //for j
             }
-            if (count > 0) {
-                mostOccuredVowel = ch;
+            if (count > max_freq){
+                max_freq=count;
+                max_alpha=c;
             }
+            count=0;
+            whatVowel=whatVowel.replace(c,'*');
         }
-        return mostOccuredVowel;
+        return max_alpha;
     }
     // THE METHOD FOR DETECTING THE # OF UPPER CASE LETTERS
     public static int upperCase(String upperCaseCounter)
@@ -112,7 +115,7 @@ public class CharLoop
             // Whitespace Counter: Pulled from Line: 38: Method: whiteSpace
             System.out.println("whitespace = " + whiteSpace(_userInput_));
 
-            // Vowel Counter: Pulled from Line: ##: Method: maxVowelCount
+            // Vowel Counter: Pulled from Line: 17 & 46: Method: maxVowelCount & whichVowel
             if (maxVowelCount(vowels) > 0)
             System.out.println("vowel " + whichVowel(vowels) + " occurs the most = " + maxVowelCount(vowels));
             else
