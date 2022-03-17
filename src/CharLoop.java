@@ -54,7 +54,7 @@ public class CharLoop
         }
         return countWhiteSpace; 
     }
-        // METHOD FOR DETERMING WHICH VOWEL SHOWS UP MOST
+    // METHOD FOR DETERMING WHICH VOWEL SHOWS UP MOST
     public static void whichVowel(String str) {
         char output_C = ' '; int c_max = 0, count = 0;
         char c;
@@ -100,10 +100,10 @@ public class CharLoop
         try (// Scanner Class & Initalization
         Scanner scan = new Scanner(System.in)) {
             String _userInput_ = scan.nextLine();
-            String vowels = _userInput_.toLowerCase();
+            String lowerCase = _userInput_.toLowerCase();
 
             // Vowel Count: Pulled from Line: 12: Method: Vowel
-            System.out.println("vowels = " + vowels(vowels)); // .toLowerCase so that it accounts for all vowels.
+            System.out.println("vowels = " + vowels(lowerCase)); // .toLowerCase so that it accounts for all vowels.
 
             // Uppercase Count: Pulled from Line: 24: Method: upperCase
             System.out.println("upper = " + upperCase(_userInput_));
@@ -115,7 +115,7 @@ public class CharLoop
             System.out.println("whitespace = " + whiteSpace(_userInput_));
 
             // Vowel Counter: Pulled from Line: 58 Method: maxVowelCount & whichVowel
-            whichVowel(vowels);
+            whichVowel(lowerCase);
 
             // Repeated Characters: Pulled from Line: 82 Method: repeatedC
             repeatedC(_userInput_);
