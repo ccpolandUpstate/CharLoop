@@ -19,7 +19,7 @@ public class CharLoop
                 countVowels ++;
             }
         }
-		return countVowels;
+        return countVowels;
     }
     // THE METHOD FOR DETECTING THE # OF UPPER CASE LETTERS
     public static int upperCase(String upperCaseCounter)
