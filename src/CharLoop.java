@@ -56,25 +56,25 @@ public class CharLoop
     }
     // METHOD FOR DETERMING WHICH VOWEL SHOWS UP MOST
     public static void whichVowel(String str) {
-        char output_C = ' '; int c_max = 0, count = 0;
-        char c;
-        for (int i = 0; i < str.length(); i++){
-            c = str.charAt(i);
+        char outputCharacter = ' '; 
+        int charMax = 0, count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                for (int j = 0; j < str.length(); j++){
+                for (int j = 0; j < str.length(); j++) {
                     if (str.charAt(j) == c)
                     count++;
                 }
             }
-            if (count > c_max){
-                c_max = count;
-                output_C = c;
+            if (count > charMax) {
+                charMax = count;
+                outputCharacter = c;
             }
             count = 0;
             str = str.replace(c,' ');
         }
-        if (c_max > 0)
-        System.out.println("vowel " + output_C + " occurs the most = " + c_max);
+        if (charMax > 0)
+        System.out.println("vowel " + outputCharacter + " occurs the most = " + charMax);
         else
         System.out.println("no vowels");
         return;
@@ -82,9 +82,8 @@ public class CharLoop
     // THE METHOD FOR DETECTING REPEATED CHARACTERS
     public static void repeatedC(String str) {
         StringBuilder f = new StringBuilder();
-        char c;
         for (int i = 1; i < str.length(); i++) {
-            c = str.charAt(i);
+            char c = str.charAt(i);
             if (str.charAt(i) == str.charAt(i-1)) {
                 f.append(c).append(" ");
             }
