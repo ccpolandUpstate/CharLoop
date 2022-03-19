@@ -1,18 +1,26 @@
-## Getting Started
+## Char Loop
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Spits out a couple things in regards to a userinputted String.
 
-## Folder Structure
+Vowels:
 
-The workspace contains two folders by default, where:
+Uppercase:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Digits:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Whitespace:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Most occured Vowel & Count:
 
-## Dependency Management
+Repeated Characters:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+## Syntax Required for the Project:
+
+- For Loops / While Loops
+
+- If Statements
+
+- Nested For/if statements
+
+- Knowledge of Methods (not required but integrated anyway)
