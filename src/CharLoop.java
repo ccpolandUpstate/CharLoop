@@ -51,7 +51,7 @@ public class CharLoop
         return countWhiteSpace; 
     }
     // METHOD FOR DETERMING WHICH VOWEL SHOWS UP MOST
-    public static void whichVowel(String str) {
+    public static void whichVowel(String str) { // CODE B // 
         char outputCharacter = ' '; 
         int charMax = 0, count = 0;
         for (int i = 0; i < str.length(); i++) {
@@ -63,10 +63,10 @@ public class CharLoop
                 }
             }
             if (count > charMax) {
-                charMax = count;
-                outputCharacter = c;
+                charMax = count; // Max Count set to current count while ifstatement is true.
+                outputCharacter = c; // outputChar is set to the char with most count. 
             }
-            count = 0;
+            count = 0; // Reset count before returning to top of the loop
             str = str.replace(c,' ');
         }
         if (charMax > 0)
@@ -76,12 +76,12 @@ public class CharLoop
         return;
     }
     // THE METHOD FOR DETECTING REPEATED CHARACTERS
-    public static void repeatedC(String str) {
+    public static void repeatedC(String str) { // CODE A //
         StringBuilder f = new StringBuilder();
         for (int i = 1; i < str.length(); i++) {
             char c = str.charAt(i);
             if (str.charAt(i) == str.charAt(i-1))
-                f.append(c).append(" ");
+                f.append(c).append(" "); // Stores the character, as well as a space between each assuming the ifstatement is true. 
         }
         if (f.length() > 0)
         System.out.print("repeated characters: " + f);
