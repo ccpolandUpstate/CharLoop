@@ -15,9 +15,8 @@ public class CharLoop
         int countVowels = 0;
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
                 countVowels ++;
-            }
         }
         return countVowels;
     }
@@ -26,9 +25,8 @@ public class CharLoop
     {
         int countUpperCase = 0; 
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
+            if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z')
                 countUpperCase++;
-            }
         }
         return countUpperCase;
     }
@@ -37,9 +35,8 @@ public class CharLoop
     {
         int countDigits = 0;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+            if (str.charAt(i) >= '0' && str.charAt(i) <= '9')
                 countDigits++;
-            }
         }
         return countDigits;
     }
@@ -48,9 +45,8 @@ public class CharLoop
     {
         int countWhiteSpace = 0;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == ' ') {
-                countWhiteSpace++;
-            }
+            if (Character.isWhitespace(str.charAt(i))) // While the codepost allows for charAt(i) == ' '
+                countWhiteSpace++;          // It is better to do .isWhiteSpace to account for tab, extra lines, and jumps.
         }
         return countWhiteSpace; 
     }
@@ -84,9 +80,8 @@ public class CharLoop
         StringBuilder f = new StringBuilder();
         for (int i = 1; i < str.length(); i++) {
             char c = str.charAt(i);
-            if (str.charAt(i) == str.charAt(i-1)) {
+            if (str.charAt(i) == str.charAt(i-1))
                 f.append(c).append(" ");
-            }
         }
         if (f.length() > 0)
         System.out.print("repeated characters: " + f);
